@@ -1,0 +1,74 @@
+@import "styles/variables.scss";
+
+@mixin spaceBetweenContents {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  background-color: $text-color-primary;
+  width: 100%;
+  color: #ffffff;
+  padding: $spacing-lg;
+  font-family: $paragraph-font;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 0.5fr;
+  gap: $spacing-md;
+  min-height: 100px;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: $spacing-lg;
+  }
+}
+
+.button {
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: $spacing-md;
+  }
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/** Grid Areas */
+
+.accreditation {
+  @include spaceBetweenContents();
+}
+
+.navLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: column;
+}
+
+.socials {
+  @include spaceBetweenContents();
+}
+
+.newsletter {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.scrollTop {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-start;
+}

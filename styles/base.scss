@@ -1,0 +1,41 @@
+@import "./variables.scss";
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+div,
+footer,
+header,
+main,
+article {
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  white-space: nowrap;
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+}
+
+p {
+  margin: $spacing-xs 0;
+  font-family: $paragraph-font;
+  font-size: $text-size-regular;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
