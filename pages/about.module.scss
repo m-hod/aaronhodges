@@ -1,0 +1,63 @@
+@import "styles/variables.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: $spacing-lg;
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: $tablet) {
+    grid-row: 2;
+  }
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: $spacing-lg * 2;
+  row-gap: $spacing-lg;
+  margin: $spacing-lg 0;
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portrait {
+  border-radius: 50%;
+  width: 350px;
+  margin-bottom: $spacing-md;
+}
+
+.linksGrid {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: $spacing-md;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: $spacing-md 0;
+  svg {
+    color: $text-color-primary;
+    height: 46px;
+    width: 46px;
+    &:hover {
+      color: $text-color-secondary;
+    }
+  }
+}

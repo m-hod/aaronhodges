@@ -1,6 +1,7 @@
 @import "styles/variables.scss";
 
 .container {
+  height: 160px;
   width: 100%;
   position: sticky;
   display: flex;
@@ -29,7 +30,7 @@
 
   .alt {
     font-size: $text-size-regular;
-    font-family: $paragraph-font;
+    font-family: $blog-font;
   }
 }
 
@@ -38,5 +39,8 @@
   font-weight: bold;
   font-size: $text-size-regular;
   margin: 0 $spacing-lg;
-  font-family: $paragraph-font;
+  font-family: $blog-font;
+  &:hover {
+    color: $text-color-secondary;
+  }
 }

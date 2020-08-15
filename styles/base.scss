@@ -14,6 +14,21 @@ article {
   box-sizing: border-box;
 }
 
+h1 {
+  @include title;
+  margin: $spacing-md 0;
+}
+
+h2 {
+  @include subtitle;
+  margin: $spacing-md 0;
+}
+
+h3 {
+  @include emphasis;
+  margin: $spacing-md 0;
+}
+
 button {
   background: none;
   white-space: nowrap;
@@ -26,9 +41,8 @@ button {
 }
 
 p {
-  margin: $spacing-xs 0;
-  font-family: $paragraph-font;
-  font-size: $text-size-regular;
+  @include paragraph;
+  margin: $spacing-sm 0;
 }
 
 a {

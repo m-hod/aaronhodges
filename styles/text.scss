@@ -3,7 +3,49 @@ $text-color-secondary: #949494;
 
 $text-size-title: 64px;
 $text-size-subtitle: 32px;
+$text-size-emphasis: 26px;
+$text-size-upsized: 20px;
 $text-size-regular: 16px;
 
 $title-font: "Times New Roman", Times, serif;
-$paragraph-font: "Roboto", Arial, Helvetica, sans-serif;
+$blog-font: "Roboto", Arial, Helvetica, sans-serif;
+
+@mixin title {
+  font-family: $title-font;
+  color: $text-color-primary;
+  font-size: $text-size-title;
+  font-weight: normal;
+}
+
+@mixin subtitle {
+  font-family: $title-font;
+  color: $text-color-primary;
+  font-size: $text-size-subtitle;
+  font-weight: normal;
+}
+
+@mixin emphasis {
+  font-family: $title-font;
+  color: $text-color-secondary;
+  font-size: $text-size-emphasis;
+  font-weight: normal;
+  font-style: italic;
+}
+
+@mixin paragraph {
+  font-family: $title-font;
+  color: $text-color-secondary;
+  font-size: $text-size-upsized;
+}
+
+@mixin blog {
+  font-family: $blog-font;
+  font-size: $text-size-upsized;
+  color: $text-color-secondary;
+}
+
+@mixin blogAlt {
+  font-family: $blog-font;
+  font-size: $text-size-regular;
+  color: #ffffff;
+}

@@ -1,16 +1,18 @@
 import Head from "next/head";
 import styles from "./index.module.scss";
 import classnames from "classnames";
-import Page from "../components/Page/Page";
+import * as Page from "../components/Page/Page";
 
 export default function Home() {
   return (
-    <Page>
-      <Head>
+    <Page.Wrapper>
+      <Head key="home">
         <title>Aaron Hodges</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <article className={styles.container}>hi</article> */}
-    </Page>
+      <Page.Content>
+        <div>hi</div>
+      </Page.Content>
+    </Page.Wrapper>
   );
 }
