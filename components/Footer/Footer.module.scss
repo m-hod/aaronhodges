@@ -13,11 +13,11 @@
   color: #ffffff !important;
   padding: $spacing-lg;
   font-family: $blog-font;
-  min-height: 200px;
+  min-height: $footer-height;
   display: flex;
   align-items: center;
   @media screen and (min-width: $desktop) {
-    height: 200px;
+    height: $footer-height;
   }
 }
 

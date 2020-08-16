@@ -5,11 +5,7 @@ import styles from "./about.module.scss";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
-interface Props {}
-
-function About(props: Props) {
-  const {} = props;
-
+function About() {
   return (
     <Page.Wrapper>
       <Head key="about">
